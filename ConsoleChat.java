@@ -45,3 +45,16 @@ public static String removeTillWord(String input, String word) {
         String trimEnd = replace(trimStart, trim, "");
         return trimEnd;
     }
+//remember to put log(update); inside your onUpdateReceived method in your class extending the bot. this method logs messages and replies sent by others in any chat your bot s in.
+public static void log(Update update){
+        String msg = msgText(update);
+        String username = username(update);
+      if(isreply(update)) {
+            String replymsg = r_msgText(update);
+            String replyuser = r_username(update);
+              System.out.println(replyuser + ": " + replymsg + "\nREPLY:\n" + username + ": " + msg+"\n--------------------------");
+        } else {
+            System.out.println(username + ": " + msg+"\n--------------------------");
+        }
+
+    }

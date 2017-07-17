@@ -31,3 +31,17 @@ public static void chat() {
             e.printStackTrace();
         }
     }
+//static methods from setup.utils;
+public static String removeTillWord(String input, String word) {
+        return input.substring(input.indexOf(word));
+    }
+
+    public static String replace(String input, String word, String replace) {
+        return input.replace(word, replace);
+    }
+
+    public static String delete_to(String msg, String trim){
+        String trimStart = removeTillWord(msg, trim);
+        String trimEnd = replace(trimStart, trim, "");
+        return trimEnd;
+    }

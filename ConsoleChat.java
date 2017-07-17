@@ -20,3 +20,14 @@ public static void chat() {
             }
         }
     }
+
+ public static void sendImage(String filePath, Long chatId) {
+        SendPhoto photo = new SendPhoto()
+                .setChatId(chatId)
+                .setNewPhoto(new java.io.File(filePath));
+        try {
+            rf.sendPhoto(photo);
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }
+    }

@@ -31,7 +31,9 @@ public static void chat() {
             e.printStackTrace();
         }
     }
+
 //static methods from setup.utils;
+
 public static String removeTillWord(String input, String word) {
         return input.substring(input.indexOf(word));
     }
@@ -45,7 +47,9 @@ public static String removeTillWord(String input, String word) {
         String trimEnd = replace(trimStart, trim, "");
         return trimEnd;
     }
+
 //remember to put log(update); inside your onUpdateReceived method in your class extending the bot. this method logs messages and replies sent by others in any chat your bot s in.
+
 public static void log(Update update){
         String msg = msgText(update);
         String username = username(update);

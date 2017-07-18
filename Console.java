@@ -15,6 +15,7 @@ public static void console() {
         }
     }
     
+
     public static void sendConsole(String chat_id, String msg) {
         SendMessage message = new SendMessage()
                 .setChatId(chat_id)
